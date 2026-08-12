@@ -1,118 +1,46 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<style>
-<footer>
-    <p>© 2026 Sufiyan Aslam. All Rights Reserved.</p>
-</footer>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-nav {
-    background: #222;
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 18px;
-}
-
-nav a:hover {
-    color: #00aaff;
-}
-
-#home {
-    text-align: center;
-    padding: 100px 20px;
-    background: #f2f7ff;
-}
-
-#home h1 {
-    font-size: 45px;
-}
-
-#home p {
-    font-size: 22px;
-}
-#services {
-    text-align: center;
-    padding: 60px 20px;
-    background: white;
-}
-
-#services h2 {
-    font-size: 35px;
-}
-
-#services p,
-#services li {
-    font-size: 20px;
-    margin: 15px;
-}
-#services li {
-    background: #f2f7ff;
-    padding: 15px;
-    margin: 12px auto;
-    max-width: 500px;
-    border-radius: 10px;
-    list-style-position: inside;
-}
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sufiyan Aslam | Portfolio</title>
+    <title>Sufiyan Aslam | Freelancer Portfolio</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            background: #f5f7fa;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             color: #222;
-            <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#contact">Contact Me</a>
-            </nav>
-            <a href="#home">Home</a>
+            background: #f5f7fa;
         }
 
         header {
             background: #111827;
             color: white;
-            padding: 20px 8%;
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         header h2 {
-            font-size: 25px;
+            font-size: 24px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             margin-left: 25px;
+            font-size: 16px;
         }
 
         nav a:hover {
@@ -120,14 +48,14 @@ footer {
         }
 
         .hero {
-            min-height: 80vh;
+            min-height: 90vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(135deg, #111827, #2563eb);
-            color: white;
             padding: 40px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
         }
 
         .hero h1 {
@@ -136,90 +64,122 @@ footer {
         }
 
         .hero p {
-            font-size: 20px;
-            margin-bottom: 25px;
+            font-size: 22px;
+            margin-bottom: 30px;
         }
 
         .button {
             display: inline-block;
-            background: white;
-            color: #2563eb;
-            padding: 13px 25px;
-            border-radius: 25px;
+            background: #38bdf8;
+            color: #111827;
+            padding: 13px 28px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
         }
 
+        .button:hover {
+            background: white;
+        }
+
         section {
-            padding: 70px 10%;
+            padding: 80px 8%;
+        }
+
+        .section-title {
             text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #111827;
         }
 
-        section h2 {
-            font-size: 35px;
-            margin-bottom: 25px;
-        }
-
-        .about p {
-            max-width: 700px;
+        .about {
+            max-width: 850px;
             margin: auto;
-            line-height: 1.8;
+            text-align: center;
             font-size: 18px;
         }
 
         .services {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 25px;
-            flex-wrap: wrap;
         }
 
         .card {
             background: white;
-            width: 280px;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
         }
 
         .card h3 {
-            margin-bottom: 15px;
-            color: #2563eb;
-        }
-
-        .card p {
-            line-height: 1.6;
+            margin-bottom: 12px;
+            color: #1d4ed8;
         }
 
         .contact {
             background: #111827;
             color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
         }
 
         .contact p {
-            margin: 10px;
             font-size: 18px;
+            margin: 10px 0;
         }
 
         footer {
-            background: #020617;
+            background: #030712;
             color: white;
             text-align: center;
             padding: 20px;
         }
 
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin: 8px;
+        @media (max-width: 900px) {
+            .services {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .hero h1 {
-                font-size: 40px;
+                font-size: 42px;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 18px;
             }
         }
     </style>
@@ -238,68 +198,95 @@ footer {
         </nav>
     </header>
 
+
+    <!-- HOME -->
     <section class="hero" id="home">
         <div>
             <h1>Hi, I'm Sufiyan Aslam</h1>
-          <p>Professional Freelancer | Graphic Designer | Data Entry Expert | Data Scraping | Virtual Assistant</p>
+
+            <p>Freelancer | Graphic Designer | Data Entry Expert</p>
+
             <a href="#contact" class="button">Contact Me</a>
         </div>
     </section>
 
-    <section class="about" id="about">
-        <h2>About Me</h2>
 
-        <p>
-            Hello! My name is Sufiyan Aslam. I am a freelancer
-            and graphic designer. I also have experience in data entry
-            and virtual assistant work. I create professional and
-            creative solutions for my clients.
-        </p>
+    <!-- ABOUT -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+            <p>
+                I am Sufiyan Aslam, a dedicated freelancer and professional
+                graphic designer. I also provide data entry, data scraping
+                and virtual assistant services. I focus on delivering
+                accurate, creative and high-quality work to my clients.
+            </p>
+        </div>
     </section>
 
+
+    <!-- SERVICES -->
     <section id="services">
-        <h2>My Services</h2>
+        <h2 class="section-title">My Services</h2>
 
         <div class="services">
 
             <div class="card">
-                <h3>Graphic Design</h3>
+                <h3>🎨 Graphic Designing</h3>
                 <p>
-                    Professional logos, social media posts,
-                    business cards and other creative designs.
+                    Creative and professional designs for social media,
+                    business and personal projects.
                 </p>
             </div>
 
             <div class="card">
-                <h3>Data Entry</h3>
+                <h3>📊 Data Entry</h3>
                 <p>
-                    Accurate and reliable data entry,
-                    Excel work and web research services.
+                    Accurate and organized data entry services with
+                    attention to detail.
                 </p>
             </div>
 
             <div class="card">
-                <h3>Virtual Assistant</h3>
+                <h3>🔎 Data Scraping</h3>
                 <p>
-                    Online assistance, research,
-                    data management and administrative support.
+                    Collecting and organizing useful business and
+                    online data efficiently.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💻 Virtual Assistant</h3>
+                <p>
+                    Reliable remote assistance for everyday business
+                    and administrative tasks.
                 </p>
             </div>
 
         </div>
     </section>
 
+
+    <!-- CONTACT -->
     <section class="contact" id="contact">
-        <h2>Contact Me</h2>
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>Let's work together!</p>
 
         <p>Email: your-email@example.com</p>
-        <p>Phone: +92 XXX XXXXXXX</p>
+
+        <br>
+
+        <a href="mailto:your-email@example.com" class="button">
+            Send Email
+        </a>
     </section>
+
 
     <footer>
         <p>© 2026 Sufiyan Aslam. All Rights Reserved.</p>
     </footer>
 
 </body>
-</html> 
->About Me</h2> <p> My name is Sufiyan Aslam. I am a freelancer and a professional graphic designer. I also have experience in data entry and virtual assistant work. I create creative and professional designs for my clients. </p> </section> <section id="contact"> <h2>Contact Me</h2> <p>Email: your-email@example.com</p> <p>Phone: Your Phone Number</p> </section>
+</html>
